@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CustomDatepicker from './CustomDatepicker';
+import CustomDatepicker2Month from './CustomDatepicker2Month';
+import "react-datepicker/dist/react-datepicker.css";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{
+      display: "flex",
+    }}>
+      <div style={{ width: "300px" }}>
+        <p>Changing year &amp; month</p>
+        <CustomDatepicker />
+      </div>
+      <div style={{ width: "600px" }}>
+        <p>2 months &amp; filtered dates</p>
+        <CustomDatepicker2Month />
+      </div>
     </div>
   );
 }
